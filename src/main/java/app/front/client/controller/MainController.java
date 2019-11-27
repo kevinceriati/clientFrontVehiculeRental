@@ -1,13 +1,18 @@
 package app.front.client.controller;
 
-import app.front.client.model.Car;
+import java.util.*;
+
+import app.front.client.form.*;
+import app.front.client.model.*;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
+import org.springframework.http.HttpHeaders;
 
 @Controller
 public class MainController {
@@ -20,7 +25,9 @@ public class MainController {
 
     @Value("${api.reservation}")
     private String reserveBase;
+
     private String url;
+    private Reservation resa;
 
     @GetMapping(value = { "/", "/index" })
     public String index(Model model){
@@ -31,8 +38,18 @@ public class MainController {
         return "index";
     }
 
+    // to test render view
     @GetMapping(value = {"/userInfo" })
     public String userInfo(Model model) {
+        return "userForm";
+    }
+
+    @PostMapping(value = {"/userInfo" })
+    public String userInfo(Model model, @ModelAttribute("resaForm") ResaForm resaForm) {
+        RestTemplate template = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+
+
 
         return "userForm";
     }

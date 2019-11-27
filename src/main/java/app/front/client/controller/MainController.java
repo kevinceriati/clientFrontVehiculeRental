@@ -6,6 +6,7 @@ import app.front.client.form.*;
 import app.front.client.model.*;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
@@ -37,12 +38,12 @@ public class MainController {
         model.addAttribute("cars", cars);
         return "index";
     }
-
-    // to test render view userInfo
-    @GetMapping(value = {"/userInfo" })
-    public String userInfo(Model model) {
-        return "userForm";
-    }
+//
+//    // to test render view userInfo
+//    @GetMapping(value = {"/userInfo" })
+//    public String userInfo(Model model) {
+//        return "userForm";
+//    }
 
     // to test render view validation
     @GetMapping(value = {"/validation" })
@@ -53,12 +54,18 @@ public class MainController {
 
     @PostMapping(value = {"/userInfo" })
     public String userInfo(Model model, @ModelAttribute("resaForm") ResaForm resaForm) {
+        Reservation newRes = new Reservation();
+
         RestTemplate template = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
 
-
-
-        return "userForm";
+        if (resaForm.getBeginDate() != null && resaForm.getEndDate() != null ){
+            newRes.setBeginDate(resaForm.getBeginDate());
+            return "userForm";
+        } else {
+            return null;
+        }
     }
 
 }

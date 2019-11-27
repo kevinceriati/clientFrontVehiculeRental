@@ -29,7 +29,7 @@ public class MainController {
     private String url;
     private Reservation resa;
 
-    @GetMapping(value = { "/", "/index" })
+    @GetMapping(value = { "/", "/index", "validationForm" })
     public String index(Model model){
         RestTemplate rt = new RestTemplate();
         url = carBase + "car";

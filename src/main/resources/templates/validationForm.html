@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container bg-warning">
+    <h2 class="text-center mt-4">Validation de la location</h2>
+</div>
+
+<form>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Client</h1>
+                <div class="row">
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">Nom:</p>
+                    </div>
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">Prénom:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Véhicule</h1>
+                <div class="row">
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">Marque: </p>
+                    </div>
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">Modèle: </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">couleur: </p>
+                    </div>
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">chevaux fiscaux: </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">frais de location: </p>
+                    </div>
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">frais complémentaires: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Réservation</h1>
+                <div class="row">
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">Date de début:</p>
+                    </div>
+                    <div class="col mt-3 ml-5">
+                        <p class="lead">Date de fin:</p>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary float-right my-3">Confirmer</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

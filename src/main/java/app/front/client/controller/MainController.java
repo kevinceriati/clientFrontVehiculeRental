@@ -30,4 +30,11 @@ public class MainController {
         model.addAttribute("cars", cars);
         return "index";
     }
+
+    @GetMapping(value = {"/userInfo" })
+    public String userInfo(Model model) {
+
+        return "userForm";
+    }
+
 }

@@ -4,6 +4,10 @@
 }
 
 .carousel-inner{
-    height: 450px;
+    /*height: 450px;*/
     overflow: hidden;
+}
+
+label{
+    font-weight: bolder;
 }

@@ -38,11 +38,18 @@ public class MainController {
         return "index";
     }
 
-    // to test render view
+    // to test render view userInfo
     @GetMapping(value = {"/userInfo" })
     public String userInfo(Model model) {
         return "userForm";
     }
+
+    // to test render view validation
+    @GetMapping(value = {"/validation" })
+    public String validation(Model model) {
+        return "validationForm";
+    }
+
 
     @PostMapping(value = {"/userInfo" })
     public String userInfo(Model model, @ModelAttribute("resaForm") ResaForm resaForm) {

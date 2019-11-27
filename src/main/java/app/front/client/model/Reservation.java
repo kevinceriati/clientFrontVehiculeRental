@@ -12,11 +12,11 @@ public class Reservation {
 
     public Reservation () {}
 
-    public Reservation (int id, int user, int car, Date begining, Date end) {
+    public Reservation (int id, int user, int car, Date beginDate, Date endDate) {
         this.id = id;
         this.user = user;
         this.car = car;
-        this.begining = begining;
-        this.end = end;
+        this.beginDate = beginDate;
+        this.endDate = endDate;
     }
 }

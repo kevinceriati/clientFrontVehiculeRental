@@ -6,6 +6,9 @@ import app.front.client.form.*;
 import app.front.client.model.*;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
@@ -57,14 +60,29 @@ public class MainController {
         resa.setBeginDate(carDateForm.getBeginDate());
         resa.setEndDate(carDateForm.getEndDate());
         model.addAttribute("resa", resa);
-        System.out.println(resa);
         return "userForm";
     }
 
     @PostMapping(value = { "validInfo" })
     public String passForm2(Model model, @ModelAttribute UserForm userForm){
+        RestTemplate rt = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        User isUser = new User();
+        isUser.setUserName(userForm.getUserName());
+        HttpEntity<User> request = new HttpEntity<>(isUser, headers);
+        url = userBase + "user/userName=" + userForm.getUserName();
+        isUser = rt.postForObject(url, request, User.class);
+        resa.setUser(isUser.getId());
 
-        System.out.println(userForm);
-        return "index";
+
+//        checkResaMethod
+
+
+        model.addAttribute("resa", resa);
+        System.out.println(resa);
+        return "validationForm";
     }
+
+//    @PostMapping(value= { "" })
 }

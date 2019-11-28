@@ -70,6 +70,10 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Reservation{" + "id=" + id + ", user=" + user + ", car=" + car + ", beginDate=" + beginDate + ", endDate=" + endDate + '}';
+        return "{" +
+                "idClient=" + user + "," +
+                " idVehicle=" + car + "," +
+                " startDate=" + beginDate + "," +
+                " endDate=" + endDate + '}';
     }
 }

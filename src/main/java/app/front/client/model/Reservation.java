@@ -7,12 +7,20 @@ public class Reservation {
     private int id;
     private int user;
     private int car;
-    private Date beginDate;
-    private Date endDate;
+    private String beginDate;
+
+
+    private String endDate;
 
     public Reservation () {}
 
-    public Reservation (int id, int user, int car, Date beginDate, Date endDate) {
+    public Reservation(int car, String beginDate, String endDate) {
+        this.car = car;
+        this.beginDate = beginDate;
+        this.endDate = endDate;
+    }
+
+    public Reservation(int id, int user, int car, String beginDate, String endDate) {
         this.id = id;
         this.user = user;
         this.car = car;
@@ -44,15 +52,24 @@ public class Reservation {
         this.car = car;
     }
 
-    public Date getBeginDate() {
+    public String getBeginDate() {
         return beginDate;
     }
 
-    public void setBeginDate(Date beginDate) {
+    public void setBeginDate(String beginDate) {
         this.beginDate = beginDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Reservation{" + "id=" + id + ", user=" + user + ", car=" + car + ", beginDate=" + beginDate + ", endDate=" + endDate + '}';
     }
 }

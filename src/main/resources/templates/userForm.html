@@ -39,54 +39,55 @@
         </div>
     </div>-->
 
-    <form action="" method="" class="flex space-between py-5">
+    <form th:action="@{validInfo}" th:object="${userForm}" method="POST" class="flex space-between py-5">
+        <input type="hidden">
         <div class="container">
             <h3>Je suis déjà client CarRental</h3>
             <div class="justify-content-center mt-5">
                 <label><strong>Entrer votre nom d'utilisateur</strong></label>
                 <input type="text" id="userName" class="form-control" placeholder="User name">
             </div>
-            <button type="submit" class="btn btn-primary float-right mt-3">Envoyer</button>
+            <button type="submit" class="btn btn-primary float-right mt-3">Continuer...</button>
         </div>
     </form>
-    <hr class="pt-5"/>
+<!--    <hr class="pt-5"/>-->
 
-    <form action="" method="" class="flex space-between mt-5">
-        <div class="container">
-            <h3>Créer un compte</h3>
-            <div class="row mt-5">
-                <div class="col">
-                <label>First name</label>
-                <input type="text" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <label>Last name</label>
-                <input type="text" class="form-control" placeholder="Last name">
-            </div>
-        </div>
-            <div class="row mt-5">
-                <div class="col">
-                    <label>User name</label>
-                    <input type="text" class="form-control" placeholder="User name">
-                </div>
-                <div class="col">
-                    <label>Licence</label>
-                    <input type="text" class="form-control" placeholder="Enter your licence">
-                </div>
-            </div>
-            <div class="form-group row mt-5">
-                <div class="col">
-                <label for="birth-date-input" class="col-form-label">Date de naissance</label>
-                    <input class="form-control" type="date" value="2019-11-27" id="birth-date-input">
-                </div>
-                <div class="col">
-                    <label for="graduate-date-input" class="col-form-label">Date d'obtention du permis</label>
-                    <input class="form-control" type="date" value="2011-08-19" id="graduate-date-input">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary float-right my-3">Envoyer</button>
-        </div>
-    </form>
+<!--    <form action="" method="" class="flex space-between mt-5">-->
+<!--        <div class="container">-->
+<!--            <h3>Créer un compte</h3>-->
+<!--            <div class="row mt-5">-->
+<!--                <div class="col">-->
+<!--                <label>First name</label>-->
+<!--                <input type="text" class="form-control" placeholder="First name">-->
+<!--            </div>-->
+<!--            <div class="col">-->
+<!--                <label>Last name</label>-->
+<!--                <input type="text" class="form-control" placeholder="Last name">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--            <div class="row mt-5">-->
+<!--                <div class="col">-->
+<!--                    <label>User name</label>-->
+<!--                    <input type="text" class="form-control" placeholder="User name">-->
+<!--                </div>-->
+<!--                <div class="col">-->
+<!--                    <label>Licence</label>-->
+<!--                    <input type="text" class="form-control" placeholder="Enter your licence">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="form-group row mt-5">-->
+<!--                <div class="col">-->
+<!--                <label for="birth-date-input" class="col-form-label">Date de naissance</label>-->
+<!--                    <input class="form-control" type="date" value="2019-11-27" id="birth-date-input">-->
+<!--                </div>-->
+<!--                <div class="col">-->
+<!--                    <label for="graduate-date-input" class="col-form-label">Date d'obtention du permis</label>-->
+<!--                    <input class="form-control" type="date" value="2011-08-19" id="graduate-date-input">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <button type="submit" class="btn btn-primary float-right my-3">Continuer</button>-->
+<!--        </div>-->
+<!--    </form>-->
 
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
